@@ -34,10 +34,6 @@ var MailtoJS = {
         var provider = 'local';
         var url = '#';
 
-        send.href = url;
-        send.className = 'btn';
-        send.setAttribute('target', '');
-
         for (var key in this.providers) {
             var obj = this.providers[key];
 
@@ -45,28 +41,26 @@ var MailtoJS = {
 
                 if (this.from.indexOf(obj.pattern) !== -1) {
                     provider = key;
-                    url = obj.url;
-
-                    send.className += ' ' + provider;
                     break;
                 }
             }
         }
 
-        if (this.to.length > 0) {
+        send.setAttribute('target', '');
+        send.className = 'btn ' + provider;
 
-            if (provider === 'local') {
-                url = this.providers.local.url;
+        if (this.from.length > 0 && this.to.length > 0) {
 
-            } else {
+            if (provider !== 'local') {
                 send.setAttribute('target', '_blank');
             }
 
+            url = this.providers[provider].url;
             url = url.replace('{t}', this.to);
             url = url.replace('{s}', this.subject);
             url = url.replace('{b}', this.body);
-
-            send.href = url;
         }
+
+        send.href = url;
     }
 };
