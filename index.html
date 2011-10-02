@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>MailtoJS</title>
+    <link rel="stylesheet" href="mailto.css">
+</head>
+<body>
+
+    <h1>MailtoJS</h1>
+    
+    <div id="mailto">
+    	<label for="mail-from">Your Email</label>
+    	<input type="text" value="" id="mail-from" onkeyup="MailtoJS.init();" />
+    	<br />
+    
+		<label for="mail-to">Friend's Email</label>
+    	<input type="text" value="" id="mail-to" onkeyup="MailtoJS.init();" />
+    	<br />
+    	
+    	<a href="#" id="mail-send" class="btn">Send</a>
+    </div>
+    
+    <script type="text/javascript" src="mailto.js"></script>
+</body>
+</html>
