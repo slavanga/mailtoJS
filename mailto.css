@@ -3,23 +3,28 @@ body {
 	font-size: 14px;
 	color: #333;
 	margin: 10px auto;
-	width: 380px;
+	width: 346px;
 }
 
 label {
-	width: 130px;
+	float: left;
+	width: 100px;
 	display: inline-block;
 	cursor: pointer;
 }
 
-input[type="text"] {
+input, textarea {
 	width: 230px;
 	padding: 7px;
 }
 
-input, .btn {
+input:focus, textarea:focus {
+	border: 1px solid #AAA;
+}
+
+input, textarea, .btn {
 	border-radius: 4px;
-	border: 1px solid #ccc;
+	border: 1px solid #DDD;
 	margin: 0 0 7px 0;
 }
 
