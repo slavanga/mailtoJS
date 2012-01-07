@@ -1,9 +1,21 @@
+html {
+	background: #EFEFEF;
+}
+
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	color: #333;
-	margin: 10px auto;
+	background: #FFF;
+	margin: 50px auto;
 	width: 346px;
+	padding: 15px;
+	border-radius: 4px;
+}
+
+h1 {
+	font-size: 26px;
+	margin: 0 0 30px 0;
 }
 
 label {
@@ -13,32 +25,43 @@ label {
 	cursor: pointer;
 }
 
-input, textarea {
+input {
 	width: 230px;
 	padding: 7px;
 }
 
-input:focus, textarea:focus {
+input:focus {
 	border: 1px solid #AAA;
 }
 
-input, textarea, .btn {
+input, .btn {
 	border-radius: 4px;
 	border: 1px solid #DDD;
 	margin: 0 0 7px 0;
 }
 
 .btn {
+	width: 246px;
 	color: #333;
-	text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-	padding: 6px 8px 6px 30px;
-	float: right;
-	background-color: #f5f5f5;
+	background-color: #E6E6E6;
 	background-repeat: no-repeat;
 	background-position: 7px center;
 	background-image: url(img/email.gif);
 	text-decoration: none;
-	outline: none;
+    border-color: #CCCCCC #CCCCCC #BBBBBB;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+	font-weight: bold;
+    line-height: normal;
+    padding: 7px 14px 7px 28px;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.2) inset, 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.btn:focus, .btn:active {
+	background-color: #D6D6D6;
+	box-shadow: none;
 }
 
 .gmail {

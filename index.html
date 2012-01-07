@@ -8,22 +8,20 @@
 	<body>
 		<h1>MailtoJS</h1>
 		
-		<form name="example_form">
+		<form name="example_form" action="mailto:">
 			<label for="mail_receiver">To:</label>
-			<input type="text" value="" id="mail_receiver" placeholder="Email address" />
+			<input type="text" id="mail_receiver" placeholder="Email address" />
 			
 			<label for="mail_sender">From:</label>
-			<input type="text" value="" id="mail_sender" placeholder="Email address" />
+			<input type="text" id="mail_sender" placeholder="Email address" />
 			
-			<label for="mail_body">Message:</label>
-			<textarea id="mail_body"></textarea>
-			
-			<a href="#" id="mail_send" class="btn">Send</a>
+			<label>&nbsp;</label>
+			<input type="submit" value="Send" class="btn" />
 		</form>
 		
 		<script type="text/javascript" src="mailto.js"></script>
 		<script type="text/javascript">
-			var mailto = new Mailto('example_form');
+			var mailto = new Mailto('example_form', { subject: 'Awesome Video', body: 'Check this out!' });
 		</script>
 	</body>
 </html>
