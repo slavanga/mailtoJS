@@ -1,4 +1,4 @@
-(function(window, document, undefined) {
+(function(window, document) {
 	
 	// http://my.opera.com/Rijk/blog/2006/07/11/mailto-to-webmail
 	var providers = {
@@ -30,9 +30,9 @@
 		this.body = config.body || '';
 		
 		this.form = document.forms[formName] || {};
-		this.receiver = this.form.elements[0];
-		this.sender = this.form.elements[1];
-		this.submit = this.form.elements[2];
+		this.receiver = this.form.elements['mail_receiver'];
+		this.sender = this.form.elements['mail_sender'];
+		this.submit = this.form.elements['mail_send'];
 	
 		this.update = function() {
 			
