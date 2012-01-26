@@ -8,15 +8,15 @@
 	<body>
 		<h1>MailtoJS</h1>
 		
-		<form name="example_form" action="mailto:">
+		<form name="example_form">
 			<label for="mail_receiver">To:</label>
-			<input type="text" id="mail_receiver" placeholder="Email address" />
+			<input type="text" name="mail_receiver" placeholder="Email address" id="mail_receiver" />
 			
 			<label for="mail_sender">From:</label>
-			<input type="text" id="mail_sender" placeholder="Email address" />
+			<input type="text" name="mail_sender" placeholder="Email address" id="mail_sender" />
 			
 			<label>&nbsp;</label>
-			<input type="submit" value="Send" class="btn" />
+			<input type="submit" name="mail_send" value="Send" class="btn" />
 		</form>
 		
 		<script type="text/javascript" src="mailto.js"></script>
