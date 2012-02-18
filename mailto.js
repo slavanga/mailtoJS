@@ -1,4 +1,5 @@
-(function(window, document) {
+(function (window, document) {
+	"use strict";
 	
 	// http://my.opera.com/Rijk/blog/2006/07/11/mailto-to-webmail
 	var providers = {
@@ -24,7 +25,7 @@
 		}
 	};
 	
-	var Mailto = function(formName, config) {
+	var Mailto = function (formName, config) {
 	
 		this.subject = config.subject || '';
 		this.body = config.body || '';
@@ -34,7 +35,7 @@
 		this.sender = this.form.elements['mail_sender'];
 		this.submit = this.form.elements['mail_send'];
 	
-		this.update = function() {
+		this.update = function () {
 			
 			this.provider = 'local';
 			this.url = '#';
@@ -64,18 +65,18 @@
 			this.url = this.url.replace('{b}', encodeURIComponent(this.body));
 		};
 		
-		this.form.onkeyup = (function(that) {
+		this.form.onkeyup = (function (that) {
 			
 			// prevent event from firing immediately
-			return function() {
+			return function () {
 				that.update();
 			}
 			
 		})(this);
 		
-		this.form.onsubmit = (function(that) {
+		this.form.onsubmit = (function (that) {
 			
-			return function() {
+			return function () {
 				
 				if(that.provider === 'local') {
 					window.location = that.url;
