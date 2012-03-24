@@ -1,5 +1,7 @@
-(function (window, document) {
-	"use strict";
+(function (window) {
+	'use strict';
+	
+	var document = window.document;
 	
 	// http://my.opera.com/Rijk/blog/2006/07/11/mailto-to-webmail
 	var providers = {
@@ -96,4 +98,4 @@
 	
 	window.Mailto = Mailto;
 	
-})(window, document);
+})(window);
