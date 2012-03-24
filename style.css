@@ -1,11 +1,8 @@
-html {
-	background: #F1F1F1;
-}
-
 body {
 	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 	font-size: 14px;
-	color: #333;
+	color: #fff;
+	background: #333;
 	margin: 50px auto;
 	width: 346px;
 	padding: 15px;
@@ -23,11 +20,14 @@ label {
 	width: 80px;
 	display: inline-block;
 	cursor: pointer;
+	line-height: 32px;
 }
 
 input {
 	width: 230px;
 	padding: 7px;
+	outline: none;
+	font-size: 14px;
 }
 
 input:focus {
